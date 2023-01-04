@@ -14,24 +14,25 @@
 		
 		
 		
-		
-		
-		
-		ArrayList<Person> array = pjdbc.getAllPersons();
-		
 		Person person = new Person();
-		
-		for (Person i : array) {
-			System.out.println(i.getName()+ ", your id is "+ i.getId()+ 
-					", "+ i.getBirthday());
-					person.setId(i.getId()+1);
-		}
+		person.setId(5);
 		person.setName("Chloe");
 		person.setIdentity("ZAA21");
 		person.setBirthday("10/10/1980");
 		pjdbc.addPerson(person);
 		
-		System.out.println(pjdbc.getPerson("Rafael").getName());
+		ArrayList<Person> array = pjdbc.getAllPersons();
+		
+		
+		
+		for (Person i : array) {
+			System.out.println(i.getName()+ ", your id is "+ i.getId()+ 
+					", "+ i.getBirthday());
+					
+		}
+		
+		
+		System.out.println(pjdbc.getPerson("Chloe").getName());
 		pjdbc.removePerson(person);
 %>
 <html>
