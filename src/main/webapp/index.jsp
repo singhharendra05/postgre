@@ -15,7 +15,7 @@
 		
 		
 		Person person = new Person();
-		person.setId(2);
+		//person.setId(2);
 		person.setName("Sirisha");
 		person.setIdentity("ZAA21");
 		person.setBirthday("10/10/1980");
