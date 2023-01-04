@@ -1,2 +1,2 @@
 # JDBC-PostgreSQL-SimpleExample 
-Very simple example of JDBC with PostgreSQL.
+Very simple example of JDBC with PostgreSQL. Test
