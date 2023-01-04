@@ -50,7 +50,7 @@ public class PersonJDBC implements PersonDAO{
 	}
 
 	public void removePerson(Person person) throws SQLException {
-		String sql = "delete from person where id_person = ?";
+		String sql = "delete from person where id = ?";
 		PreparedStatement ps = this.connection.prepareStatement(sql);
 		ps.setInt(1, person.getId());
 		ps.executeUpdate();
@@ -80,7 +80,7 @@ public class PersonJDBC implements PersonDAO{
 			Person person = new Person();
 			//get column of name
 			person.setName(result.getString("name"));
-			person.setId(result.getInt("id_person"));
+			person.setId(result.getInt("id"));
 			person.setIdentity(result.getString("identity"));
 			person.setBirthday(result.getString("birthday"));
 			array.add(person);
