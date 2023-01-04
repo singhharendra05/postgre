@@ -31,7 +31,7 @@ public class PersonJDBC implements PersonDAO{
 		
 		
 		// 1 = first '?' 
-		ps.setString(1, person.getId());
+		ps.setString(1, 1);
 		ps.setString(2, person.getName());
 		// 2 - second '?'
 		ps.setString(3, person.getIdentity());
