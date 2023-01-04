@@ -4,12 +4,12 @@ import java.util.ArrayList;
 public class Main {
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
-		//you need create database with this name 'github-example-jdbc'
-		String url = "jdbc:postgresql://localhost:5432/github-example-jdbc";
+		
+		String url = "jdbc:postgresql://203.246.192.25:2866/scptestdb";
 		//user default
-		String user = "postgres";
+		String user = "sirisha";
 		//your password. root is default
-		String password = "root";
+		String password = "password@321";
 		PersonJDBC pjdbc = new PersonJDBC(url, user, password);
 		
 		Person person = new Person();
