@@ -53,7 +53,7 @@
 		%>
 			
 		 <c:out value="${i.getName()}" />
-		 <%=i.getName();%>
+		 <%=i.getName()%>
 	<% 				
 		}
 		
