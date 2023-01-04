@@ -15,8 +15,8 @@
 		
 		
 		Person person = new Person();
-		//person.setId(2);
-		person.setName("Sirisha");
+		person.setId(8);
+		person.setName("Sirisha-new");
 		person.setIdentity("ZAA21");
 		person.setBirthday("10/10/1980");
 		pjdbc.addPerson(person);
