@@ -25,15 +25,7 @@
 		
 		
 		
-		for (Person i : array) {
-			System.out.println(i.getName()+ ", your id is "+ i.getId()+ 
-					", "+ i.getBirthday());
-					
-		}
 		
-		
-		System.out.println(pjdbc.getPerson("Chloe").getName());
-		pjdbc.removePerson(person);
 %>
 <html>
  <head>
@@ -55,5 +47,20 @@
    
   </div>
  </div>
+	 <div>
+	 <% 
+	 	for (Person i : array) {
+		%>
+			
+		 <c:out value="${i.getName()}" />
+	<% 				
+		}
+		
+	 %>	
+		System.out.println(pjdbc.getPerson("Chloe").getName());
+	<% 
+		pjdbc.removePerson(person);
+	 %>
+	 </div>
  </body>
  </html>
