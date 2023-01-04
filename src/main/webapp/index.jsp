@@ -12,20 +12,24 @@
 		String password = "password@321";
 		PersonJDBC pjdbc = new PersonJDBC(url, user, password);
 		
-		Person person = new Person();
-		person.setId(1);
-		person.setName("Chloe");
-		person.setIdentity("ZAA21");
-		person.setBirthday("10/10/1980");
-		pjdbc.addPerson(person);
+		
+		
+		
 		
 		
 		ArrayList<Person> array = pjdbc.getAllPersons();
 		
+		Person person = new Person();
+		
 		for (Person i : array) {
 			System.out.println(i.getName()+ ", your id is "+ i.getId()+ 
 					", "+ i.getBirthday());
+					person.setId(i.getId()+1);
 		}
+		person.setName("Chloe");
+		person.setIdentity("ZAA21");
+		person.setBirthday("10/10/1980");
+		pjdbc.addPerson(person);
 		
 		System.out.println(pjdbc.getPerson("Rafael").getName());
 		pjdbc.removePerson(person);
