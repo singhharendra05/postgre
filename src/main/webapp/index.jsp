@@ -1,3 +1,4 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page import="java.sql.SQLException" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="com.example.Person" %>
@@ -53,6 +54,7 @@
 		%>
 			
 		 <c:out value="${i.getName()}" />
+		 <%=i.getName();%>
 	<% 				
 		}
 		
