@@ -1,6 +1,7 @@
 <%@ page import="java.sql.SQLException" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="com.example.Person" %>
+<%@ page import="com.example.PersonJDBC" %>
 
 <%
 //you need create database with this name 'github-example-jdbc'
