@@ -17,7 +17,7 @@ public class PersonJDBC implements PersonDAO{
 		//open the connection
 		this.connection = DriverManager.getConnection(url, user, password);
 		
-		String sql1 = "CREATE TABLE IF NOT EXISTS app_user ( id integer, name varchar(45) NOT NULL, identity varchar(450) NOT NULL,birthday varchar(50),enabled integer NOT NULL DEFAULT '1',PRIMARY KEY (id));";
+		String sql1 = "CREATE TABLE IF NOT EXISTS person ( id integer, name varchar(45) NOT NULL, identity varchar(450) NOT NULL,birthday varchar(50),enabled integer NOT NULL DEFAULT '1',PRIMARY KEY (id));";
 		PreparedStatement ps1 = this.connection.prepareStatement(sql1, Statement.RETURN_GENERATED_KEYS);
 		ps1.executeUpdate();
 	}
