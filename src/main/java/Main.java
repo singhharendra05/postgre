@@ -14,6 +14,7 @@ public class Main {
 		PersonJDBC pjdbc = new PersonJDBC(url, user, password);
 		
 		Person person = new Person();
+		person.setId(1);
 		person.setName("Chloe");
 		person.setIdentity("ZAA21");
 		person.setBirthday("10/10/1980");
