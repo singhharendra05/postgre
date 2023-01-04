@@ -5,7 +5,7 @@
 
 <%
 //you need create database with this name 'github-example-jdbc'
-		String url = "jdbc:postgresql://203.246.192.25:2866/scptestdb";
+		String url = "jdbc:postgresql://203.246.192.27:2866/scptestdb";
 		//user default
 		String user = "sirisha";
 		//your password. root is default
