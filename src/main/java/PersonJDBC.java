@@ -24,18 +24,19 @@ public class PersonJDBC implements PersonDAO{
 
 	public void addPerson(Person person) throws SQLException {
 		//query of postgresql
-		String sql = "insert into person(name, identity, birthday)"
-				+ "values (?,?,?)";
+		String sql = "insert into person(id,name, identity, birthday)"
+				+ "values (?,?,?,?)";
 		
 		PreparedStatement ps = this.connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 		
 		
 		// 1 = first '?' 
-		ps.setString(1, person.getName());
+		ps.setString(1, person.getId());
+		ps.setString(2, person.getName());
 		// 2 - second '?'
-		ps.setString(2, person.getIdentity());
+		ps.setString(3, person.getIdentity());
 		// 3 = third '?'
-		ps.setString(3, person.getBirthday());
+		ps.setString(4, person.getBirthday());
 		
 		//use execute update when the database return nothing
 		ps.executeUpdate();
